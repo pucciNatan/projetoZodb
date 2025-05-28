@@ -13,12 +13,12 @@ def get_connection():
     return psycopg2.connect(**DB_CONFIG)
 
 # ---------- utilitário ----------
-def atualiza_estoque(id_livro, delta, cur):
+def atualiza_estoque(id_livro, qtd, cur):
     cur.execute("""
         UPDATE livros
         SET estoque = estoque + %s
         WHERE id_livros = %s;
-    """, (delta, id_livro))
+    """, (qtd, id_livro))
 
 # ---------- USUÁRIOS ----------
 def criar_usuario():
