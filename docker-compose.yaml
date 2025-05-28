@@ -1,0 +1,25 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:17.5-alpine3.21
+    ports: 
+      - '5432:5432'
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=polls
+
+    volumes:
+      - pg_data:/dados/postgres
+
+volumes:
+  pg_data:
+
+
+
+
+
+
+
+
