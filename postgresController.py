@@ -1,4 +1,4 @@
-from crud import *
+from postgresCRUD import *
 
 def menu():
     opcoes = {
